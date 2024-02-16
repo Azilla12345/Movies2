@@ -9,7 +9,7 @@ public class MovieCollection {
     Movie movie;
     ArrayList<Movie> Movies = new ArrayList<Movie>();
     public MovieCollection() {
-
+        start();
     }
     public void start() {
         try {
