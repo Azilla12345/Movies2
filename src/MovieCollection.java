@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class MovieCollection {
     Scanner myScanner = new Scanner(System.in);
     Movie movie;
-    ArrayList<Movie> Movies = new ArrayList<Movie>();
+    ArrayList<Movie> movies = new ArrayList<Movie>();
     public MovieCollection() {
         start();
     }
@@ -25,14 +25,21 @@ public class MovieCollection {
                 int runTime = Integer.parseInt(dataSplit[4]);
                 double rating = Double.parseDouble(dataSplit[5]);
                 Movie movie = new Movie(rating, title, director, overview, runTime, cast);
-                Movies.add(movie);
+                movies.add(movie);
             }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
-    public void getMovies() {
+
+    public void searchTitle (String title) {
+        ArrayList<Movie> movies2 = new ArrayList<Movie>();
+        for (int i = 0; i < movies.size(); i++) {
+            movies2.set(i, movies.get(i));
+        }
+        System.out.println(movies2);
     }
+
 
     public void MovieRunner() {
         System.out.println("Welcome to the movie collection!");
